@@ -10,11 +10,16 @@ export class App extends React.Component<IAppProps, {}> {
   public render(): JSX.Element {
     return (
       <div>
-        <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>
+        <h1>{APP_TEXT.HELLO_FROM} {this.props.compiler} {APP_TEXT.AND} {this.props.framework}</h1>
         <InputsWrapperContainer />
       </div>
     );
   }
+}
+
+export enum APP_TEXT {
+  HELLO_FROM = 'Hello from',
+  AND = 'and',
 }
 
 export interface IAppProps {

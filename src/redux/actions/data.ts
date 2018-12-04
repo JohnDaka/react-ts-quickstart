@@ -15,10 +15,10 @@ export interface SetData extends Redux.Action {
 
 /** Change value in store */
 export function changeValue(id: string, value: string): ChangeValue {
-  return { type: CHANGE_VALUE, id, value };
+  return { id, value, type: CHANGE_VALUE };
 }
 
 /** Set new data in store */
 export function setData(data: IDataState): SetData {
-  return { type: CHANGE_VALUE, data };
+  return { data, type: CHANGE_VALUE };
 }

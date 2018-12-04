@@ -34,7 +34,7 @@ export function changeValue(state: IDataState, id: string, value: string): IData
     return state;
   }
 
-  const newValue: IDataState = {[id]: { value, id } };
+  const newValue: IDataState = { [id]: { value, id } };
 
   return {
     ...state,

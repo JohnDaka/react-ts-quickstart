@@ -21,12 +21,18 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: "pre",
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        loader: "tslint-loader",
+      },
+      {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
       },
 
       {
-        test: /\.less$/,
+        test: /\.less?$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,

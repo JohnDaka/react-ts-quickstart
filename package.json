@@ -7,7 +7,7 @@
     "test": "",
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --mode=development",
-    "tslint": "tslint --format stylish --config ./tslint.json --project ./tsconfig.json ",
+    "tslint": "tslint --format stylish --config ./tslint.json --project ./tsconfig.json "
   },
   "author": "Ivan Daka",
   "license": "ISC",

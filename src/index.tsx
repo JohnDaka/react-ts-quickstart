@@ -1,11 +1,16 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, Store } from 'redux';
+import { App } from './components/app';
+import { IState } from './interfaces/store';
+import { Main } from './redux/reducers/index';
 
-import { Hello } from './components/hello';
-
-import './styles/index.less';
-
-ReactDOM.render(
-  <Hello compiler="TypeScript" framework="React" />,
-  document.getElementById("example")
+const store: Store<IState> = createStore(Main);
+​
+render(
+  <Provider store={store}>
+    <App compiler="React" framework="TypeScript" />
+  </Provider>,
+  document.getElementById('app')
 );

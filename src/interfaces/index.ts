@@ -1,3 +1,3 @@
-export interface ITest {
-  readonly id: number;
-}
+import * as IReduxStore from './store';
+
+export { IReduxStore };
